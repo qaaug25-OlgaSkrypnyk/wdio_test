@@ -1,4 +1,3 @@
-import { $ } from '@wdio/globals'
 import Page from './page.js'
 
 class InventoryPage extends Page {
@@ -7,9 +6,24 @@ class InventoryPage extends Page {
         return $('#react-burger-menu-btn')
     }
 
-    // Кнопка Logout в меню
     get logoutButton () {
         return $('#logout_sidebar_link')
+    }
+
+    get sidebarMenu () {
+        return $('.bm-menu-wrap')
+    }
+
+    get sidebarInventoryLink () {
+        return $('#inventory_sidebar_link')
+    }
+
+    get sidebarAboutLink () {
+        return $('#about_sidebar_link')
+    }
+
+    get sidebarResetLink () {
+        return $('#reset_sidebar_link')
     }
 
     get inventoryList () {
@@ -20,20 +34,40 @@ class InventoryPage extends Page {
         return $('.shopping_cart_link')
     }
 
+    get cartBadge () {
+        return $('.shopping_cart_badge')
+    }
+
     get sortDropdown () {
-    return $('.product_sort_container')
+        return $('.product_sort_container')
     }
 
     get itemNames () {
-    return $$('.inventory_item_name')
+        return $$('.inventory_item_name')
     }
 
     get itemPrices () {
-    return $$('.inventory_item_price')
+        return $$('.inventory_item_price')
     }
 
-    get cartBadge () {
-        return $('.shopping_cart_badge')
+    get firstItemName () {
+        return $('.inventory_item_name')
+    }
+
+    get firstAddToCartButton () {
+        return $('button.btn_inventory')
+    }
+
+    get twitterLink () {
+        return $('.social_twitter a')
+    }
+
+    get facebookLink () {
+        return $('.social_facebook a')
+    }
+
+    get linkedinLink () {
+        return $('.social_linkedin a')
     }
 
     open () {

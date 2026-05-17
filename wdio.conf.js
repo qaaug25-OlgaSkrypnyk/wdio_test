@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 export const config = {
     //
     // ====================
@@ -20,6 +23,7 @@ export const config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
+        
     specs: [
         './test/specs/**/*.js'
     ],

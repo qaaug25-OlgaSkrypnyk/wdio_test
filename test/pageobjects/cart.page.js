@@ -1,4 +1,3 @@
-import { $ } from '@wdio/globals'
 import Page from './page.js'
 
 class CartPage extends Page {
@@ -15,8 +14,16 @@ class CartPage extends Page {
         return $$('.cart_item')
     }
 
+    get cartItemName () {
+        return $('.inventory_item_name')
+    }
+
+    get removeButtons () {
+        return $$('[data-test*="remove"]')
+    }
+
     get errorMessage () {
-    return $('[data-test="error"]');
+        return $('[data-test="error"]');
     }
 
     open () {

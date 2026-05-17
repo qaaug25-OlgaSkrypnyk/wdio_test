@@ -1,4 +1,3 @@
-import { $ } from '@wdio/globals'
 import Page from './page.js';
 
 class LoginPage extends Page {
@@ -16,11 +15,11 @@ class LoginPage extends Page {
     }
 
     get errorMessage () {
-    return $('[data-test="error"]');
+        return $('[data-test="error"]');
     }
 
     get errorIcons () {
-    return $$('.error_icon');  
+        return $$('.error_icon');  
     }
 
     async login (username, password) {
